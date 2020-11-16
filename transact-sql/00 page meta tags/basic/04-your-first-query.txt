@@ -1,5 +1,4 @@
 <!-- Primary Meta Tags -->
-<title>Lesson 4. Your First Query With T-SQL</title>
 <meta name="title" content="Lesson 4. Your First Query With T-SQL">
 <meta name="description" content="In this lesson, I teach you how to write a basic query with T-SQL.">
 
