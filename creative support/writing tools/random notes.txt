@@ -1,4 +1,8 @@
 When I talk about how I went from zero to hero in the space of a week, this is the book that made that possible. It's a super easy read, and, for seven days, I only put it down to go to work. You can do things like that when you're single. N-E-WAY!
+ow to make your own job
+1. The hard way - freelancing
+2. The easy way - have a job and demonstrate ability outside of your role.
+
 
 plotly/altair/bokeh + plotly-dash/streamlit
 
@@ -7,39 +11,29 @@ Create hyperperameter tuning lecture.
 https://discord.gg/enfDGUH
 
 
-DS Learning Path Bundle link: https://mymsu.thinkific.com/enroll/602437?price_id=637141
-
-
 
 Add more examples to making decisions
-Integrate coding challenges from code wars
 In lesson 20 example one, explain more about breaking down URIs. Actually make a whole example that is just that.cross platform code.
 In database set up, add instructions on creating the Proxy Account.
-Create database installation instructions. Create an adventure works DSN improve section VIII overall.
 Improve the code wars page in the preflight
 In lesson 15 give an example of how you would ahve to write somthign out without namespaces.
-Either rename lesson 9 or lesson 13 so they are consitant.
-Rename lesson 16 file name.
-Line numbers in lesson 16 don't show in html.
-Put colons in all examples
+Line numbers in lesson 16 don't show in html. Figure out how to show line numbers in HTML.
 In lesson 17, write an explanation of how to make an anamous function with lamba.
-move the banner images to their respective files and update the social share meta tags
-
-When you write code, you will notice that you are throwing a lot of errors espeically if you are new.
+In Lesson 26 put some explanation in basic picle ops
 In the prefight section, change anchor tags so they all open in a new tab.
 Add actual instructions to creating a DSN instead of links.
 
 Object Oriented Programming 101
 In data types talk about how everything is an object. Object = Data Type = Class
 
-update temporary tables to reflect the fact that temp tables are the key to high perfomrance ETL
-Add to SCD II load for temporal tables
+Prelanch task
+create the source code repo
+create instructions on AdventureWorks DSN
+add to help instructions based on tsql tutorial
+meta tags
 
-T-SQL launch check list.
 
 
-
-Remove the word tutorial and replace with book
 
 
 Lower case words in titles are usually Python reserved words and not typos.
@@ -48,19 +42,91 @@ Watch for deliberate misspellings that might acutally be pop culture references.
 Also, I'm starting to use slang and local color quite a bit more.
 
 
-In both the TSQL and Python tutorial, create a supplimentary information section and link the SSIS blog post and why you need a framework.
+Check here for trouble shooting stuff
+C:\Users\Bob\OneDrive\Documents\Extensive Enterprises\Mass Street Analytics\FirstResponderKit
+
+Take a look at using zapier instead of thinkific pro plus
 
 
 
+
+
+In SSMS lecture, talk about deselecting, options -> designers -> table and database designers -> prevent saving changes that require table re-recreation.
+F4 for schema reassignment.
+Also talk about tools -> options -> text editor -> transact-sql -> line numbers.
+
+Pro Tip: It's better to have it and not need it than it is to need it and not have it.
+
+
+FW Docs todos:
+
+In Table Anatomy and in code in sample table scripts, make sure all SQL is capitalized. Make sure that these scripts have doc blocks.
+All hashing columns should NOT be var anything.
+Double check all code for consistancy. All find and replace values should be the same.
+	Use YourEDW
+	DimYourDimensionName
+	FactYourFactTableName
+	Usage vs whatever else in the doc block
+Replace author in code block with -- Engineer:
+move all drop indexes to the top of the script.
+Replace tutorials with actaul text.
+When you do examples, go back to the tool and fill it in then drop that code in the section that talks about that tab. 
+Create two scipts. One that populates config from table and one from YAML file.
+Further flesh out the OLTP to OLAP section
+Update all processes to check for IsProcessed and all binary columns.
+Add MDM back to example implementation.
+Finish Building Out Your Data Warehouse
+Work on Implementing SCDs As Temporal Tables
+Fleshout create Data source name 
+Draw diagram for fact table load.
+Add academic version (do this dead last!)
 Do we need to get rid of CR LF when we load data with BULK INSERT?
+Change python errors to:
+except Exception as e:
+    print(e)
+In python code, fix archive.close() add parin
+Fix comment in QueryDatabaseAndWriteSmallFile #bulk load txt file to SQL Server
+add os.chdir(source_path) to zip processes.
 
-Working 90s hours a week literally doing the work of 5 people.
+For python ds tutorial saving objects with pickle
+C:\Users\Bob\OneDrive\Documents\Extensive Enterprises\Mass Street Analytics\Projects\Viracore\Historical Code\Python Projects\TNP
 
-Python test script in IAG instructions.
+For SQL tutorial and framework
 
-How to make your own job
-1. The hard way - freelancing
-2. The easy way - have a job and demonstrate ability outside of your role.
+Hashing varchar(max)
+Quick thoughts;
+The HASHBYTES has the 8000 and 4000 character limits for VARCHAR and NVARCHAR data types respectfully. This means that if one wants to create a hash of character strings larger than the limit then one has either to resort to external methods (CLR etc.) or chunk the string accordingly. I have done this in T-SQL by using the following method:
+1) Chop the string into 8000/4000 characters
+2) Hash each chunk
+3) Concatenate the hashes and test for the length
+4) Hash the concatenation, repeating the chopping if longer than the limit.
+5) Finally ending up with one hash.
+This will generate a unique hash for the character string but obviously it will not match other methods which process the whole string in one go.
+The length of the output has nothing to do with the input lenght, it depends on which algorithm is used, available algorithms are MD2, MD4, MD5, SHA, SHA1, SHA2_256 and SHA2_512. There is a performance difference between those and I've found that the SHA1 is normally the fastest and MD5 is close behind.
+For several reasons I'm not to keen on a calculated column for the hashes, performance being an obvious one, I rather hash the content on the insert.
+
+Lesson 30. Variables rename Example Declaring A Variable And Setting Its Value In One Line Of Code to Declaring A Default Value
+
+T-SQL
+update temporary tables to reflect the fact that temp tables are the key to high perfomrance ETL
+count distinct on more than one column
+Clause in join vs not https://stackoverflow.com/questions/1018952/condition-within-join-or-where
+More details on how merge works: https://dba.stackexchange.com/questions/246002/sql-server-merge-duplicate-source-rows-validation-is-only-evaluated-on-update
+
+Train Wreck Recovery
+Yes. This is a funny title for a chapter. However, it is an apt description of what can happen to your EDW load when something goes catastrophically wrong. I frequently use a river as a metaphor for data warehouse processing. Data generally flows one way  and processes can be described as being upstream or downstream. 
+However, a freight train 
 
 
-Generators are wild yo! This is another method to write functional code in Python. These are a bit much 
+
+
+
+
+
+
+
+Don't sleep on this. I'm out here making six figures doing simple things. The difference is, I'm doing it cleaner and better than everybody else, and I'm going to teach you EXACTLY what I do. Don't get it twisted. This is NOT a generic SQL course. This class is me dumping everything I've learned about writing database software in the last 20 years.
+
+
+
+Bring effective data ops to your organization
