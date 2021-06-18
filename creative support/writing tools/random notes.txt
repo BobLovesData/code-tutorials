@@ -1,6 +1,4 @@
-How to make your own job
-1. The hard way - freelancing
-2. The easy way - have a job and demonstrate ability outside of your role.
+
 
 
 plotly/altair/bokeh + plotly-dash/streamlit
