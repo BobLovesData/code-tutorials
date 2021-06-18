@@ -132,4 +132,4 @@ dmypy.json
 *.csv
 
 #Bob specific notes file
-#random notes.txt
+random notes.txt
