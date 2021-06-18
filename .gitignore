@@ -130,3 +130,6 @@ dmypy.json
 
 # data
 *.csv
+
+#Bob specific notes file
+#random notes.txt
